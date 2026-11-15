@@ -96,6 +96,6 @@ Jefferson Nascimento.
 
 ## Testar
 
-Veja [COMO-TESTAR.md](COMO-TESTAR.md) para instalar e testar. Versões: [CHANGELOG.md](CHANGELOG.md).
+Veja [COMO-TESTAR.md](COMO-TESTAR.md) e o [MANUAL-DE-TESTE.md](MANUAL-DE-TESTE.md) para instalar e testar. Versões: [CHANGELOG.md](CHANGELOG.md).
 
 **Aviso:** o complemento de Computação (2022) ainda não está incluído nesta versão.
