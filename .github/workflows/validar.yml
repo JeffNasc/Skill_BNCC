@@ -1,0 +1,14 @@
+name: Validar base BNCC
+on: [push, pull_request]
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir estrutura dos arquivos
+        run: |
+          test -f SKILL.md
+          test -f references/indice.md
+          n=$(grep -rhoE '\b(EI0[123](EO|CG|TS|EF|ET)[0-9]{2}|EF[0-9]{2}[A-Z]{2}[0-9]{2}|EM13(LGG|LP|MAT|CNT|CHS)[0-9]{3})\b' references | sort -u | wc -l)
+          echo "Codigos unicos: $n (esperado 1576)"
+          test "$n" -eq 1576
