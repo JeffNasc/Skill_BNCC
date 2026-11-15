@@ -12,6 +12,7 @@ Base de consulta com as 1.576 habilidades da BNCC (93 da Educação Infantil, 1.
 1. Leia `references/indice.md` para saber qual arquivo abrir. Não carregue todos os arquivos.
 2. Abra somente o arquivo da etapa, do componente e do segmento pedidos (por exemplo, `references/ensino-fundamental/anos-finais/matematica.md`). Língua Portuguesa do Ensino Fundamental é dividida por bloco de anos: use a tabela "Qual arquivo abrir" do índice, que indica os dois arquivos de cada ano.
 3. Para filtrar por ano, use a coluna "Aplica-se aos anos", e não o texto da coluna Ano. Uma habilidade de bloco (EF12, EF15, EF35, EF67, EF69, EF89) vale para todos os anos listados. Exemplo: para o 2º ano, inclua as linhas em que a lista de anos contém 2.
+   Em Língua Portuguesa, abra todos os arquivos que o índice indica para o ano (para o 2º ano: o do 1º e 2º e o do 1º ao 5º) e não se limite às habilidades de bloco (EF12, EF15). As habilidades específicas do ano (EF02) também entram na seleção, escolhidas pela prática de linguagem pedida (por exemplo, leitura).
    Depois localize as linhas por unidade temática, por objeto de conhecimento ou por palavra do texto, sempre lendo o sentido e não só a palavra exata.
 4. Responda citando o código e transcrevendo o texto literal da habilidade.
 
@@ -34,12 +35,13 @@ Quem usa esta skill, em geral, não é da área de tecnologia. Por isso:
 ## Regras
 
 - Nunca invente código nem reescreva uma habilidade como se fosse o texto oficial. Se citar de forma resumida, deixe claro que é uma paráfrase e mantenha o código.
-- Se um código pedido não existir nos arquivos, diga que não foi encontrado. Não sugira o "mais próximo" sem avisar.
+- Se um código pedido não existir nos arquivos, diga que não foi encontrado e pergunte, em uma frase, qual ano e tema a pessoa tem em mente. Não sugira habilidades de um tema que ela não mencionou.
 - Se não houver habilidade com o enunciado que o professor imagina (por exemplo, "escrever o próprio nome" na Educação Infantil), diga isso com clareza e apresente as habilidades mais próximas como aproximações, explicando a diferença.
 - Ensino Médio: o número da coluna "Competência específica" remete ao texto da competência no início do arquivo da área. Mostre esse texto quando ajudar o professor.
 - Computação: algoritmo e fluxograma que aparecem na Matemática (por exemplo, EF06MA04 e EF07MA26) fazem parte da BNCC original e não são o complemento de Computação de 2022. Ao citá-los, deixe isso claro.
 - Para planejar, relacione a habilidade ao objeto de conhecimento e à unidade temática da mesma linha. Não misture linhas de componentes diferentes. Quando a linha traz vários objetos separados por " • ", a BNCC os agrupa para o conjunto de habilidades daquela célula da tabela e não indica qual objeto corresponde a qual habilidade: não afirme uma ligação um a um. Subitens aparecem como [subitem: ...] junto ao objeto a que pertencem.
 - Informe a página (coluna Pág.) quando o usuário precisar conferir no PDF oficial.
+- Pedido amplo para conferência ou lista (por exemplo, "uma lista com código, texto e página"), sem etapa nem componente: faça uma única pergunta curta ("Para qual etapa e componente?") antes de listar. Não misture etapas diferentes em uma mesma tabela.
 
 ## Estrutura das linhas
 

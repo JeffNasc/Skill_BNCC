@@ -151,6 +151,10 @@ def mapa_paginas(paginas, janela=20):
     return mapa
 
 
+# Palavras compostas cujo hifem o PDF perde na quebra de linha (conferido contra o PDF oficial).
+COMPOSTOS = {"gráficovisuais": "gráfico-visuais"}
+
+
 def juntar(partes):
     """Une as linhas de uma habilidade. Preserva hifens, pois nenhuma palavra hifenizada por
     quebra de linha foi encontrada no material (conferido na validacao)."""
@@ -163,6 +167,8 @@ def juntar(partes):
         else:
             t += " " + p
     t = t.replace("­", "").replace("\u0002", "")
+    for errado, certo in COMPOSTOS.items():
+        t = t.replace(errado, certo)
     return re.sub(r"\s+", " ", t).strip()
 
 

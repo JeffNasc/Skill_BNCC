@@ -48,7 +48,7 @@ Cole o pedido exatamente como está. O resultado esperado vem da própria base. 
 | --- | --- | --- |
 | B1 | Confira se a habilidade EF07CI01 combina com uma atividade sobre máquinas simples. | Cita o texto: "Discutir a aplicação, ao longo da história, das máquinas simples e propor soluções e invenções para a realização de tarefas mecânicas cotidianas." (pág. 347). Confirma que combina. Pode citar o objeto "Máquinas simples", mas avisa que a BNCC agrupa vários objetos para um conjunto de habilidades. |
 | B2 | O que diz a EI03ET07? | "Relacionar números às suas respectivas quantidades e identificar o antes, o depois e o entre em uma sequência." (pág. 52). |
-| B3 | O que diz a EF06MA99? | Código **não existe**. Deve dizer que não encontrou e oferecer habilidades próximas. Não inventar texto. |
+| B3 | O que diz a EF06MA99? | Código **não existe**. Deve dizer que não encontrou e perguntar o ano e o tema. Não sugerir habilidades de um tema que a pessoa não citou. Não inventar texto. |
 | B4 | O que diz a EM13LP01? | Texto sobre relacionar o texto com as condições de produção e o contexto sócio-histórico de circulação (pág. 498 do PDF do Ensino Médio). |
 
 ### Grupo C. Armadilhas (a skill deve resistir)
@@ -66,8 +66,8 @@ Cole o pedido exatamente como está. O resultado esperado vem da própria base. 
 
 | # | Pedido | O que deve acontecer |
 | --- | --- | --- |
-| D1 | sou professora e não entendo nada de tecnologia, preciso de algo pra aula de leitura do 2º ano | Linguagem simples, no máximo uma pergunta curta, sem pedir código. Habilidades de LP que valem para o 2º ano (inclui as de bloco EF12, EF15 e EF02). |
-| D2 | Sou editor e preciso de uma lista com código, texto e página para conferir no PDF. | Tabela pronta com código, texto literal e página. |
+| D1 | sou professora e não entendo nada de tecnologia, preciso de algo pra aula de leitura do 2º ano | Linguagem simples, no máximo uma pergunta curta, sem pedir código. Habilidades de LP de leitura que valem para o 2º ano, de **três blocos**: EF12/EF15 e também as próprias do ano (EF02LP12, EF02LP20, EF02LP21 e EF02LP26). |
+| D2 | Sou editor e preciso de uma lista com código, texto e página para conferir no PDF. | Pergunta, em uma frase, a etapa e o componente antes de listar. Depois entrega tabela com código, texto literal e página, sem misturar etapas. |
 
 ## 4. Verificação cruzada com o PDF oficial (amostragem)
 

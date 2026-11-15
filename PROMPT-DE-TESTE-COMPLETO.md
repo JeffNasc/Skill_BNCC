@@ -76,7 +76,7 @@ Gabarito (resultado esperado):
 - A5: Ciências do 3º ano; se não houver correspondência exata, dizer isso e oferecer o mais próximo.
 - B1: EF07CI01 = "Discutir a aplicação, ao longo da história, das máquinas simples e propor soluções e invenções para a realização de tarefas mecânicas cotidianas." (pág. 347). Combina com o tema.
 - B2: EI03ET07 = "Relacionar números às suas respectivas quantidades e identificar o antes, o depois e o entre em uma sequência." (pág. 52).
-- B3: EF06MA99 não existe; dizer que não foi encontrada, sem inventar texto.
+- B3: EF06MA99 não existe; dizer que não foi encontrada e perguntar ano e tema, sem inventar texto e sem sugerir habilidades de um tema não citado.
 - B4: EM13LP01 = relacionar o texto com suas condições de produção e seu contexto sócio-histórico de circulação (pág. 498 do PDF do Ensino Médio).
 - C1: avisar que Computação (2022) não está incluída e não inventar códigos.
 - C2: competências gerais não estão na base.
@@ -84,8 +84,8 @@ Gabarito (resultado esperado):
 - C4: manter o texto literal e explicar em palavras simples à parte.
 - C5: direcionar a Ciências da Natureza (EM13CNT).
 - C6: não despejar tudo; perguntar o ano ou o recorte.
-- D1: linguagem simples, no máximo uma pergunta curta, habilidades de LP que valem para o 2º ano (inclui blocos EF12, EF15 e EF02).
-- D2: tabela com código, texto literal e página.
+- D1: linguagem simples, no máximo uma pergunta curta, habilidades de leitura de LP do 2º ano de três blocos: EF12/EF15 e as próprias do ano (EF02LP12, EF02LP20, EF02LP21, EF02LP26).
+- D2: pergunta curta sobre etapa e componente antes de listar; depois tabela com código, texto literal e página, sem misturar etapas.
 Se você não puder confirmar um código ou texto nos arquivos, marque "não verificável" em vez de dar nota alta.
 
 FASE 3. RELATÓRIO FINAL
