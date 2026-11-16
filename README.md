@@ -90,7 +90,7 @@ Quer testar e me ajudar a melhorar? Veja [COMO-TESTAR.md](COMO-TESTAR.md), o [MA
 5. A ligação entre objeto de conhecimento e habilidade foi validada por dois algoritmos independentes e por inspeção visual de páginas de seis componentes.
 6. Os testes de `tests/regressao.py` rodam a cada envio ao GitHub.
 
-Os testes automáticos e as conferências acharam erros meus, que corrigi: um hífen perdido em "gráfico-visuais", faixas de página do Ensino Médio, subitens de objeto com marcador duplicado e um filtro por ano que perdia habilidades. Está tudo no [CHANGELOG.md](CHANGELOG.md).
+Os testes e as conferências automáticas acharam falhas na extração, que corrigi: um hífen perdido em "gráfico-visuais", faixas de página do Ensino Médio, subitens de objeto com marcador duplicado e um filtro por ano que perdia habilidades. Está tudo no [CHANGELOG.md](CHANGELOG.md).
 
 Para conferir por conta própria:
 
@@ -118,9 +118,11 @@ Requisitos: Python 3, `pdfplumber`, `pypdf`, `pdftotext` (poppler-utils) e, se o
 - Em EF67LP27, o PDF oficial não traz ponto final. O texto foi mantido literal.
 - A BNCC pode ser atualizada pelo MEC. Para uso normativo, confira sempre o documento oficial.
 
-## Como foi feito
+## Como foi feito: desenvolvimento com IA, direção humana
 
-Eu defini o problema, a fonte, o escopo, os critérios de validação e o público, e tomei as decisões acima. Usei o Claude como assistente para escrever e revisar os scripts, rodar as baterias de teste e redigir a documentação, e conferi os resultados contra os PDFs oficiais.
+Este projeto foi desenvolvido por mim em parceria com o Claude, e acho importante deixar isso claro. Eu defini o problema, a fonte oficial, o escopo, os critérios de validação, o público e todas as decisões descritas acima. O Claude atuou como assistente de desenvolvimento: escreveu e revisou os scripts, rodou as baterias de teste e ajudou na redação. Eu revisei cada resultado, decidi o que corrigir e o que ficar de fora, e exigi a conferência contra os PDFs oficiais.
+
+Essa divisão é o método do projeto: a IA acelera a execução, e a confiança vem de critérios verificáveis, que qualquer pessoa pode rodar (veja "Como a base foi validada").
 
 ## Licença
 

@@ -1,6 +1,6 @@
 # Decisões do projeto
 
-Autor: Jefferson Nascimento. Este documento registra o caminho da Skill BNCC, do problema à versão publicada, e o motivo de cada escolha.
+Autor: Jefferson Nascimento, com o Claude como assistente de desenvolvimento. Este documento registra o caminho da Skill BNCC, do problema à versão publicada, e o motivo de cada escolha.
 
 ## 1. O problema
 
@@ -8,7 +8,7 @@ IAs generativas citam habilidades da BNCC com códigos que não existem e textos
 
 ## 2. Contar no documento oficial
 
-Antes de montar qualquer coisa, contei as habilidades nos PDFs do MEC, pelos códigos únicos entre parênteses. Cheguei a 1.576: 93 na Educação Infantil, 1.304 no Ensino Fundamental e 179 no Ensino Médio.
+Antes de montar qualquer coisa, mandei contar as habilidades nos PDFs do MEC e conferi o resultado, pelos códigos únicos entre parênteses. Cheguei a 1.576: 93 na Educação Infantil, 1.304 no Ensino Fundamental e 179 no Ensino Médio.
 
 Sites citam 183 habilidades no Ensino Médio. O PDF específico do Ensino Médio traz 179, e o PDF de Educação Infantil e Fundamental guarda, nas páginas finais, uma versão anterior do Ensino Médio com 183 códigos. Decidi seguir o documento do Ensino Médio e registrar a diferença.
 
@@ -22,7 +22,7 @@ Acrescentei a unidade temática e o objeto de conhecimento de cada habilidade do
 
 ## 5. Os testes que me fizeram mudar de ideia
 
-Fiz baterias de teste simulando professores de cada ciclo e uma bateria automática contra os PDFs. Elas encontraram falhas reais:
+Conduzi, com o Claude como assistente, baterias de teste que simulam professores de cada ciclo, além de uma bateria automática contra os PDFs. Elas encontraram falhas reais, e eu decidi como corrigir cada uma:
 
 - O filtro por ano perdia mais da metade das habilidades de Língua Portuguesa. Criei a coluna "Aplica-se aos anos".
 - Subitens de objeto saíam com marcador duplicado.
