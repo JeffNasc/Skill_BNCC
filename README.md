@@ -99,3 +99,15 @@ Jefferson Nascimento.
 Veja [COMO-TESTAR.md](COMO-TESTAR.md) e o [MANUAL-DE-TESTE.md](MANUAL-DE-TESTE.md) para instalar e testar. Versões: [CHANGELOG.md](CHANGELOG.md).
 
 **Aviso:** o complemento de Computação (2022) ainda não está incluído nesta versão.
+
+## Verificação independente
+
+Qualquer pessoa pode conferir a base contra os PDFs oficiais do MEC:
+
+```
+python3 -I tests/regressao.py
+python3 -I scripts/verificar_fidelidade_pdf.py references <pdf_ei_ef_reparado> <pdf_ensino_medio>
+python3 -I scripts/validar_bncc.py
+```
+
+O segundo script confere o texto de todas as habilidades e a página (rodapé impresso) contra os PDFs. O primeiro roda a cada push no GitHub.

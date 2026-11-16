@@ -57,5 +57,18 @@ confere("sem 'gráficovisuais'", not any("gráficovisuais" in " ".join(c) for f,
 # Sem caracteres de controle
 confere("sem caracteres de controle", not any(re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f­]", " ".join(c)) for f, c in TODAS))
 
+# Códigos semelhantes não podem se confundir (um código, uma linha)
+confere("códigos únicos (sem duplicidade)", len(POR_CODIGO) == len(TODAS))
+confere("EF06MA07 e EF06MA08 distintos", POR_CODIGO["EF06MA07"][1][-2] != POR_CODIGO["EF06MA08"][1][-2])
+# Códigos inválidos de formatos diferentes
+for cod in ("EF06MA99", "EF10MA01", "EI04EO01", "EM13MAT999", "EM13LP99", "EF02LI01", "EF01MA00"):
+    confere(f"código inexistente {cod}", cod not in POR_CODIGO)
+# Pedidos de vários componentes: cada componente tem linhas no 6º ano
+for comp in ("MA", "CI", "GE", "HI", "LP", "AR", "EF", "LI", "ER"):
+    confere(f"6º ano tem {comp}", any(re.match(rf"EF(06|67|69)(?:{comp})", c) or re.match(rf"EF06{comp}", c) for c in POR_CODIGO))
+# Todo arquivo de EF tem a coluna 'Aplica-se aos anos' preenchida com anos válidos
+ok = all(re.fullmatch(r"[1-9](, [1-9])*", c[2]) for f, c in TODAS if c[0].startswith("EF"))
+confere("coluna 'Aplica-se aos anos' válida em todas as linhas EF", ok)
+
 print(f"\n{len(falhas)} falha(s)")
 sys.exit(1 if falhas else 0)

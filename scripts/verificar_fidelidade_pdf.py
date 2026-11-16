@@ -6,6 +6,7 @@ Uso:
 
 O PDF de EI e EF costuma precisar de reparo antes (qpdf --qdf ou qpdf entrada.pdf saida.pdf).
 Para EF, confere cada palavra (4+ letras) nas páginas onde o código aparece, só na coluna de habilidades (pdfplumber). Para EI e EM, usa o texto da página (pypdf).
+Também confere a coluna Pág. de cada habilidade contra o número impresso no rodapé da página do PDF onde o código aparece.
 Sai com código 1 se algum texto não for encontrado.
 """
 import re, sys, glob, unicodedata
@@ -67,6 +68,32 @@ def palavras_ausentes_ef(base, pdf):
     return ausentes
 
 
+def paginas_por_codigo(pdf, regex):
+    """Número impresso no rodapé de cada página onde o código aparece entre parênteses."""
+    occ = {}
+    for pg in pdfplumber.open(pdf).pages:
+        ws = pg.extract_words()
+        cods = [w["text"][1:-1] for w in ws if re.fullmatch(regex, w["text"])]
+        rod = [int(w["text"]) for w in ws if re.fullmatch(r"\d{1,3}", w["text"]) and w["top"] > pg.height * 0.92]
+        if cods and rod:
+            for c in cods:
+                occ.setdefault(c, set()).add(rod[0])
+    return occ
+
+
+def paginas_divergentes(pasta, pdf, regex, prefixos):
+    """Códigos cuja coluna Pág. não coincide com o rodapé de nenhuma página do PDF onde o código aparece."""
+    occ = paginas_por_codigo(pdf, regex)
+    ruins = []
+    for f in glob.glob(f"{pasta}/**/*.md", recursive=True):
+        if f.endswith("indice.md"):
+            continue
+        for c in linhas(f):
+            if c[0].startswith(prefixos) and int(c[-1]) not in occ.get(c[0], set()):
+                ruins.append(c[0])
+    return ruins
+
+
 def texto_pypdf(pdf):
     return norm(" ".join((p.extract_text() or "") for p in PdfReader(pdf).pages))
 
@@ -90,6 +117,13 @@ def main():
             ausentes = [c for c, t in base.items() if norm(t) not in pdf]
         print(f"{nome}: {len(base)} textos conferidos, {len(ausentes)} não encontrados no PDF", ausentes[:10])
         falhou = falhou or bool(ausentes)
+    for nome, pdf, regex, prefixos in (
+        ("EI e EF", pdf_ef, r"\((EF|EI)\d{2}[A-Z]{2}\d{2}\)", ("EF", "EI")),
+        ("EM", pdf_em, r"\(EM13[A-Z]{2,3}\d{2,3}\)", ("EM",)),
+    ):
+        ruins = paginas_divergentes(pasta, pdf, regex, prefixos)
+        print(f"Página {nome}: {len(ruins)} divergem do rodapé do PDF", ruins[:10])
+        falhou = falhou or bool(ruins)
     return 1 if falhou else 0
 
 

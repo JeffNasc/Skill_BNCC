@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 (2026-11-15)
+
+- `scripts/verificar_fidelidade_pdf.py` agora também confere a página: a coluna Pág. de cada habilidade precisa coincidir com o número impresso no rodapé da página do PDF onde o código aparece. Resultado atual: 0 divergências em 1.576.
+- `tests/regressao.py` ampliado: códigos inexistentes de vários formatos, códigos semelhantes, componentes do 6º ano e coluna "Aplica-se aos anos".
+
 ## 1.0.1 (2026-11-15)
 
 - Correção de texto: EF03LP11 trazia "gráficovisuais"; o PDF oficial traz "gráfico-visuais". Achado pelo novo script de fidelidade.
