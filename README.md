@@ -4,6 +4,8 @@ Base de consulta gratuita e de código aberto com as habilidades da Base Naciona
 
 Funciona como skill nativa do Claude e pode ser reaproveitada em um GPT personalizado e em agentes do Microsoft Copilot.
 
+![Arquitetura da Skill BNCC](docs/arquitetura.png)
+
 ## O que há na base
 
 | Etapa | Habilidades |
